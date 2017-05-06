@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+<style>
+    table tr {
+        vertical-align: top;
+        font-family: Arial,Tahoma,Verdana;
+        font-size: 16px;
+    }
+
+    td.right {
+        background: #ececec;
+        font-weight: bold;
+        text-align: left;
+    }
+    td.center {
+        background: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td {
+        padding: 10px 15px;
+        border: 1px solid #ececec;
+    }
+
+</style>
+
+<table cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td class="center" colspan="2">Версия для печати</td>
+    </tr>
+    <tr>
+        <td class="right" width="25%">Название новости</td>
+        <td>@ViewBag.OneNews.Title</td>
+    </tr>
+    <tr>
+        <td class="right">Дата создания</td>
+        <td>@ViewBag.OneNews.Created</td>
+    </tr>
+    <tr>
+        <td class="right">Содержание</td>
+        <td>@ViewBag.OneNews.Content</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    document.onload = window.print();
+</script>
+
+
+

@@ -1,0 +1,87 @@
+﻿@model Connection.Data.Race
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@if (ViewContext.RouteData.Values["Action"].ToString() == "Add")
+{
+    <h2>Добавить новый забег</h2>  
+}
+else
+{
+    <h2>Редактировать забег</h2>  
+}
+
+<div id="register">
+    @if (ViewBag.Success != null)
+    {
+        <div class="mess-top">
+            <div class="fbok">
+                <div class="success">@ViewBag.Success</div>
+            </div>
+        </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewBag.Error</div>
+            </div>
+        </div>
+    }
+@using (Html.BeginForm())
+{
+    <div class="fb">
+        <div class="description">Название:</div>
+        <div class="date">
+            @Html.TextBox("title", null, new { @class = "w100" })
+            @if (!ViewData.ModelState.IsValidField("title"))
+            {
+                <div class="error">
+                    <div class="msg">
+                        @Html.ValidationMessageFor(x => x.Title)
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="cb"></div>
+    </div>
+    <div class="fb">
+        <div class="description">Описание:</div>
+        <div class="date">
+            @Html.TextBox("description", null, new { @class = "w100" })
+            @if (!ViewData.ModelState.IsValidField("description"))
+            {
+                <div class="error">
+                    <div class="msg">
+                        @Html.ValidationMessageFor(x => x.Description)
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="cb"></div>
+    </div>
+    <div class="fb">
+        <div class="description">Расстояние(в метрах):</div>
+        <div class="date">
+            @Html.TextBox("distance", null, new { @class = "w100" })
+            @if (!ViewData.ModelState.IsValidField("distance"))
+            {
+                <div class="error">
+                    <div class="msg">
+                        @Html.ValidationMessageFor(x => x.Distance)
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="cb"></div>
+    </div>
+    
+    
+    <div id="m20" class="submit">
+        <input type="submit" class="btn" value="Сохранить" />
+    </div>
+}
+
+
+</div>

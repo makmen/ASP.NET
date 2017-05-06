@@ -1,0 +1,51 @@
+﻿@model ConnectionDb.Account
+
+@{
+    ViewBag.Title = "Forget";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div id="register">
+    @if (ViewBag.Success != null)
+    {
+        <div class="mess-top">
+            <div class="fbok">
+                <div class="success">@ViewBag.Success</div>
+            </div>
+        </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewBag.Error</div>
+            </div>
+        </div>
+    }
+    @using (Html.BeginForm())
+    {
+        <div id="contact_form">
+            <div id="Note"></div>
+            <div class="field ambitios_input_standat_height ambitios_p2">
+                <label for="email">Введите ваш email</label>
+                @Html.TextBox("email", null, new { @class = "required" })
+                @if (!ViewData.ModelState.IsValidField("email"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div>
+                <div class="buttons-wrapper">
+                    <div class="ambitios_wrapper ambitios_p2">
+                        <div class="ambitios_button_contact">
+                            <input type="submit" value="Send" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

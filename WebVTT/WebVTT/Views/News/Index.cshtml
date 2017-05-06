@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+    @foreach (var news in ViewBag.ListNews)
+    {
+        <div class="ambitios_p4">
+	        <div class="ambitios_wrapper ambitios_p2">
+		        <h3 class="ambitios_uppercase ambitios_p5">@news.Title</h3>
+		        <div class="ambitios_date">@news.Created</div>
+	        </div>
+	        <p>@news.Content ... </p>
+	        <div class="ambitios_wrapper">
+                <a href="@Url.Content("~/news/viewone/" + news.Id)" class="ambitios_button_small_rev ambitios_fleft">Читать</a>
+	        </div>
+        </div>
+    }
+<div class="ambitios_pagination">
+    @for (var i = 1; i <= ViewBag.NumPages; i++)
+    {
+        <a class="@(ViewBag.Page == i ? " currentpagging" : "")" 
+           href="@Url.Content("~/news?p=" + i)">@i</a>
+    }
+</div>

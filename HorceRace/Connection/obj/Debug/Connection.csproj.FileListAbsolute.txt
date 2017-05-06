@@ -1,0 +1,10 @@
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\Connection.dll.config
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\Connection.dll
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\Connection.pdb
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\EntityFramework.dll
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\EntityFramework.SqlServer.dll
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\EntityFramework.xml
+D:\need\buffer\trainMVC\HorceRace\Connection\bin\Debug\EntityFramework.SqlServer.xml
+D:\need\buffer\trainMVC\HorceRace\Connection\obj\Debug\Connection.csprojResolveAssemblyReference.cache
+D:\need\buffer\trainMVC\HorceRace\Connection\obj\Debug\Connection.dll
+D:\need\buffer\trainMVC\HorceRace\Connection\obj\Debug\Connection.pdb

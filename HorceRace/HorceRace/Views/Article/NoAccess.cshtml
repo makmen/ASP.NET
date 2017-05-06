@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="err">
+    <div class="mess-top">
+        <div class="error">
+            <h2 class="noaccess">Доступ запрещен </h2>
+            <div class="msg">
+                @if (ViewBag.noAccess == "1")
+                {
+                    <p>У вас нет прав на доступ к этому разделу</p>
+                } else {
+                    <p>@ViewBag.noAccess</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

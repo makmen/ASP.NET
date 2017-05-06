@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h2>Upload</h2>
+@if (ViewData["error"]!=null)
+{ 
+    <div class="ambitios_textarea ambitios_p2 field">
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewData["error"]</div>
+            </div>
+        </div>
+    </div>
+}
+@if (ViewData["ok"]!=null)
+{
+    <div class="mess-top">
+        <div class="fbok">
+            <div class="success">@ViewData["ok"]</div>
+        </div>
+    </div>
+}
+
+<div class="ambitios_textarea ambitios_p2 field">
+    <label>Загрузить файл</label>
+</div>
+<div class="ambitios_textarea ambitios_p2 field">
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        <input type="file" name="upload" />
+    </div>
+
+    <div class="buttons-wrapper">
+        <div class="ambitios_wrapper ambitios_p2">
+            <div class="ambitios_button_contact">
+                <input type="submit" value="Upload" />
+            </div>
+        </div>
+    </div>
+}
+</div>

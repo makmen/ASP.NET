@@ -1,0 +1,81 @@
+﻿@model Connection.Data.Participant
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div id="register">
+    @if (ViewBag.Success != null)
+    {
+        <div class="mess-top">
+            <div class="fbok">
+                <div class="success">@ViewBag.Success</div>
+            </div>
+        </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewBag.Error</div>
+            </div>
+        </div>
+    }
+    <h2>Добавление участника для заезда @ViewContext.RouteData.Values["id"].ToString() </h2>
+    @using (Html.BeginForm())
+    {
+        <div class="fb">
+            <div class="description">Наездник:</div>
+            <div class="date">
+                @Html.TextBox("jokey", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("jokey"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Jokey)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="fb">
+            <div class="description">Тренер:</div>
+            <div class="date">
+                @Html.TextBox("trener", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("trener"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Trener)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="fb">
+            <div class="description">Порода лошади:</div>
+            <div class="date">
+                @Html.TextBox("horse", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("horse"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Horse)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        
+        
+        <div id="m20" class="submit">
+            <input type="submit" class="btn" value="Сохранить" />
+        </div>
+    }
+
+
+</div>
+

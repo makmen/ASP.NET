@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<h3 class="ambitios_uppercase">Контактная информация </h3>
+@if (ViewBag.Success != null)
+{
+    <div class="mess-top">
+        <div class="fbok">
+            <div class="success">@ViewBag.Success</div>
+        </div>
+    </div>
+}
+@if (ViewBag.Error != null)
+{
+    <div class="mess-top">
+        <div class="error">
+            <div class="msg">@ViewBag.Error</div>
+        </div>
+    </div>
+}
+@using (Html.BeginForm("contacts", "article", null,
+    FormMethod.Post,
+    new { id = "register" }))
+{
+    <div id="contact_form">
+        <div id="Note"></div>
+        <div class="field ambitios_input_standat_height ambitios_p2">
+            <label for="name">Имя</label>
+            @Html.TextBox("name", null, new { @class = "required" })
+        </div>
+        <div class="field ambitios_input_standat_height ambitios_p2">
+            <label for="email">Email</label>
+            @Html.TextBox("email", null, new { @class = "required email" })
+        </div>
+        <div class="ambitios_textarea ambitios_p2 field">
+            <label for="message">Сообщение</label>
+            @Html.TextArea("message", null, 5, 10, new { @class = "required" })
+        </div>
+        <div>
+            <div class="buttons-wrapper">
+                <div class="ambitios_wrapper ambitios_p2">
+                    <div class="ambitios_button_contact">
+                        <input type="submit" value="Send" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="ambitios_wrapper">
+    <div class="ambitios_fleft">
+        <h3 class="ambitios_uppercase">Главный организатор: Лоренский Андрей Петрович </h3>
+        Phone: +375 29 395 22 1у<br />
+        Fax: 8017 125 32 64<br />
+        Email: <a href="mailto:mail@vactt@mail.ru">hourserace@mail.ru</a><br />
+    </div>
+</div>
+<br />
+<div class="ambitios_picture ambitios_p2">
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=eG5OG_eatgnABSizBk2fviWWJi38Kdu4&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
+</div>

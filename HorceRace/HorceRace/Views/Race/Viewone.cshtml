@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Viewone";
+    Layout = "~/Views/_Layout.cshtml";
+    int i = 0;
+}
+
+<div class="ambitios_p4">
+    <div class="ambitios_wrapper ambitios_p2">
+        <h3 class="ambitios_uppercase ambitios_p5">@ViewBag.Onerace.Title</h3>
+        <div class="ambitios_date">
+            <p>@ViewBag.Onerace.Created</p>
+            @if (ViewBag.CanEdit != null)
+            {
+                <div class="newsedit">
+                    <a href="@Url.Content("~/Race/Edit/" + ViewBag.Onerace.Id)">Редактировать</a>
+                </div>
+                <div class="cb"></div>
+            }
+            <p>@ViewBag.Onerace.Distance метров</p>
+        </div>
+        <div class="ambitios_date">
+            @switch((string)ViewBag.Onerace.Status)
+            {
+                case "wait":
+                    <h5>Статус: Ожидание забега</h5>
+                    break;
+                case "run":
+                    <h5>Статус: Идет забег</h5>
+                    break;
+                default:
+                    <h5>Статус: Завершен</h5>
+                    break;
+            }
+        </div>
+        <br />
+        @ViewBag.Onerace.Description
+    </div>
+
+    <div class="ambitios_grid_11 ambitios_alpha">
+        @if (ViewBag.Allparticipants != null && ViewBag.Allparticipants.Count > 0)
+        {
+            <h3 class="ambitios_uppercase">Участники</h3>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        @if (ViewBag.Onerace.Status != "wait")
+                        {
+                            <td class="ambitios_first_td">
+                                <strong>Позиция</strong>
+                            </td>
+                            <td>
+                                <strong>Номер участника</strong>
+                            </td>
+                        }
+                        else
+                        {
+                            <td class="ambitios_first_td">
+                                <strong>Номер участника</strong>
+                            </td>
+                        }
+                        <td>
+                            <strong>Наездник</strong>
+                        </td>
+                        <td>
+                            <strong>Тренер</strong>
+                        </td>
+                        <td>
+                            <strong>Порода лошади</strong>
+                        </td>
+                        @if (ViewBag.CanEdit != null)
+                        {
+                            <td>&nbsp;</td>
+                        }
+                    </tr>
+                </thead>
+                    @foreach (var item in ViewBag.Allparticipants)
+                    {
+                        <tr>
+                            @if (ViewBag.Onerace.Status != "wait")
+                            {
+                                i++;
+                                <td>@i</td>
+                            }
+                            <td>@item.Num</td>
+                            <td>@item.Jokey</td>
+                            <td>@item.Trener</td>
+                            <td>@item.Horse</td>
+                            @if (ViewBag.CanEdit != null)
+                            {
+                                <td><a href="@Url.Content("~/Participant/Edit/" + @item.Id)">Редактировать</a></td>
+                            }
+                        </tr>
+                    }
+            </table>
+            <br />
+        }
+        else
+        {
+            <p>Нет ни одого участника</p>
+        }
+    </div>
+        @if (ViewBag.CanEdit != null)
+        {
+            <div class="ambitios_wrapper">
+                <a href="@Url.Content("~/Participant/Add/" + ViewBag.Onerace.Id)" class="ambitios_button_small_rev ambitios_fleft">Добавить участника</a>
+            </div>
+            <br />
+            if (ViewBag.Allparticipants != null && ViewBag.Allparticipants.Count > 4)
+            { 
+                <div class="ambitios_wrapper">
+                    <a href="@Url.Content("~/Race/Start/" + ViewBag.Onerace.Id)" class="ambitios_button_small_rev ambitios_fleft">Начасть забег</a>
+                </div>
+                <br />
+            }
+        }
+        <a href="javascript:void(0)" onclick="back();">Вернуться на предыдущую страницы</a>
+    </div>
+@if (ViewBag.Onerace.Status == "run")
+{
+    <script type="text/javascript" language="javascript">
+        var delay = 12000;
+        setTimeout("document.location.href='@Url.Content("~/Race/Viewone/" + ViewBag.Onerace.Id)'", delay);
+    </script>
+}
+<script type="text/javascript" language="javascript">
+    function back() {
+        history.go(-1);
+    }
+</script>

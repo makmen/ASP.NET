@@ -1,0 +1,79 @@
+﻿@model HorceRace.Models.ChangePass
+@{
+    ViewBag.Title = "Change";
+    Layout = "~/Views/_Layout.cshtml";
+}
+<div id="register">
+    @if (ViewBag.Success != null)
+    {
+        <div class="mess-top">
+            <div class="fbok">
+                <div class="success">@ViewBag.Success</div>
+            </div>
+        </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewBag.Error</div>
+            </div>
+        </div>
+    }
+    @using (Html.BeginForm())
+    {
+        <div class="fb">
+            <div class="description">Старый пароль:</div>
+            <div class="date">
+                @Html.Password("oldpassword", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("oldpassword"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Oldpassword)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="fb">
+            <div class="description">Новый пароль:</div>
+            <div class="date">
+                @Html.Password("newpassword", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("newpassword"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Newpassword)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="fb">
+            <div class="description">Повторить пароль:</div>
+            <div class="date">
+                @Html.Password("renewpassword", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("renewpassword"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Renewpassword)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+
+        <div class="submit news">
+            <input type="submit" class="btn" value="Сохранить" />
+        </div>
+
+    }
+
+
+
+</div>

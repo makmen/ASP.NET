@@ -1,0 +1,181 @@
+﻿@model Connection.Data.Account
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div id="register">
+    @if (ViewBag.Success != null)
+    {
+        <div class="mess-top">
+            <div class="fbok">
+                <div class="success">@ViewBag.Success</div>
+            </div>
+        </div>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <div class="mess-top">
+            <div class="error">
+                <div class="msg">@ViewBag.Error</div>
+            </div>
+        </div>
+    }
+    @using (Html.BeginForm())
+    {
+        <div class="fb">
+            <div class="description">Имя:</div>
+            <div class="date">
+                @Html.TextBox("name", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("name"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Name)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+
+        <div class="fb">
+            <div class="description">Отчество:</div>
+            <div class="date">
+                @Html.TextBox("middlename", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("middlename"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.MiddleName)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+
+        <div class="fb">
+            <div class="description">Фамилия:</div>
+            <div class="date">
+                @Html.TextBox("lastname", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("lastname"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.LastName)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+
+        <div class="fb">
+            <div class="description">E-mail:</div>
+            <div class="date">
+                @Html.TextBox("email", null, new { @class = "w100" })
+                @if (!ViewData.ModelState.IsValidField("email"))
+                {
+                    <div class="error">
+                        <div class="msg">
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="fb">
+            <div class="description">Телефон:</div>
+            <div class="date">
+                @Html.TextBox("phone", null, new { @class = "w100" })
+            </div>
+            <div class="cb"></div>
+        </div>
+        if (ViewContext.RouteData.Values["Action"].ToString() != "Edit")
+        {
+            <div class="fb">
+                <div class="description">Логин:</div>
+                <div class="date">
+                    @Html.TextBox("login", null, new { @class = "w100" })
+                    @if (!ViewData.ModelState.IsValidField("login"))
+                    {
+                        <div class="error">
+                            <div class="msg">
+                                @Html.ValidationMessageFor(x => x.Login)
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="fb">
+                <div class="description">Пароль:</div>
+                <div class="date">
+                    @Html.Password("password", null, new { @class = "w100" })
+                    @if (!ViewData.ModelState.IsValidField("password"))
+                    {
+                        <div class="error">
+                            <div class="msg">
+                                @Html.ValidationMessageFor(x => x.Password)
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="fb">
+                <div class="description">Повторить пароль:</div>
+                <div class="date">
+                    @Html.Password("repassword", null, new { @class = "w100" })
+                    @if (ViewBag.RepasswordError != null)
+                    {
+                        <div class="error">
+                            <div class="msg">
+                                @ViewBag.RepasswordError
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="cb"></div>
+            </div>
+            if (HttpContext.Current.Session["login"] == null)
+            {
+                <div class="fbcaptaha">
+                    <div class="description">Введите код:</div>
+                    <div class="image">
+                        <img id="captchaDiv" src="@Url.Action("Captcha", "Register")" alt="" />
+                        <img id="refresh" src="@Url.Content("~/Images/refresh.gif")" alt="" />
+                    </div>
+                    <div class="date">
+                        @Html.TextBox("captcha", null, new { @class = "w100" })
+                        @if (ViewBag.CaptchaError != null)
+                        {
+                            <div class="error">
+                                <div class="msg">
+                                    @ViewBag.CaptchaError
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="cb"></div>
+                </div>
+            }
+
+            <script type="text/javascript">
+                $('#refresh').click(function () {
+                    $('#captchaDiv').attr('src', '@Url.Action("Captcha", "Register")?r=' + Math.random());
+                });
+            </script>
+        }
+
+        <div class="submit">
+            <input type="submit" class="btn" value="Сохранить" />
+        </div>
+    }
+
+
+
+</div>

@@ -1,0 +1,10 @@
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\VacuumBase.dll.config
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\VacuumBase.dll
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\VacuumBase.pdb
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\obj\Debug\VacuumBase.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\obj\Debug\VacuumBase.dll
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\obj\Debug\VacuumBase.pdb
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\DbLink.dll
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\EntityFramework.dll
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\DbLink.pdb
+D:\need\buffer\train_ASP\VacuumBase\VacuumBase\bin\EntityFramework.xml

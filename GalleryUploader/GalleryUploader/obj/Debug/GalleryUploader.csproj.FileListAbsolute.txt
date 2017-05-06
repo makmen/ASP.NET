@@ -1,0 +1,6 @@
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\bin\GalleryUploader.dll.config
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\bin\GalleryUploader.dll
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\bin\GalleryUploader.pdb
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\obj\Debug\GalleryUploader.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\obj\Debug\GalleryUploader.dll
+D:\need\buffer\train_ASP\GalleryUploader\GalleryUploader\obj\Debug\GalleryUploader.pdb

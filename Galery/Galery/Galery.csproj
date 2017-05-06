@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37EC06ED-4727-47B7-979D-726B955906BA}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galery</RootNamespace>
+    <AssemblyName>Galery</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\color.css" />
+    <Content Include="Content\hover.htc" />
+    <Content Include="Content\ie6.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\superfish.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\ambitios_area_bg.gif" />
+    <Content Include="Images\ambitios_arrow_left.gif" />
+    <Content Include="Images\ambitios_arrow_right.gif" />
+    <Content Include="Images\ambitios_arrow_top.gif" />
+    <Content Include="Images\ambitios_big_pic.gif" />
+    <Content Include="Images\ambitios_big_pic.jpg" />
+    <Content Include="Images\ambitios_block_quotes.gif" />
+    <Content Include="Images\ambitios_button2_bgs1.gif" />
+    <Content Include="Images\ambitios_button2_bgs1_hover.gif" />
+    <Content Include="Images\ambitios_button2_bgs2.gif" />
+    <Content Include="Images\ambitios_button2_bgs2_hover.gif" />
+    <Content Include="Images\ambitios_button2_bgs3.gif" />
+    <Content Include="Images\ambitios_button2_bgs3_hover.gif" />
+    <Content Include="Images\ambitios_button3_bgs1.gif" />
+    <Content Include="Images\ambitios_button3_bgs1.png" />
+    <Content Include="Images\ambitios_button3_bgs1_hover.png" />
+    <Content Include="Images\ambitios_button3_bgs2.png" />
+    <Content Include="Images\ambitios_button3_bgs2_hover.png" />
+    <Content Include="Images\ambitios_button3_bgs3.gif" />
+    <Content Include="Images\ambitios_button3_bgs3.png" />
+    <Content Include="Images\ambitios_button3_bgs3_hover.png" />
+    <Content Include="Images\ambitios_button_bgs1.gif" />
+    <Content Include="Images\ambitios_button_bgs1_hover.gif" />
+    <Content Include="Images\ambitios_button_bgs2.gif" />
+    <Content Include="Images\ambitios_button_bgs2_hover.gif" />
+    <Content Include="Images\ambitios_button_bgs3.gif" />
+    <Content Include="Images\ambitios_button_bgs3_hover.gif" />
+    <Content Include="Images\ambitios_button_submit.gif" />
+    <Content Include="Images\ambitios_dot.png" />
+    <Content Include="Images\ambitios_dot_act.png" />
+    <Content Include="Images\ambitios_first_row_bg.gif" />
+    <Content Include="Images\ambitios_footer_bg.gif" />
+    <Content Include="Images\ambitios_footer_button.png" />
+    <Content Include="Images\ambitios_footer_text.jpg" />
+    <Content Include="Images\ambitios_footer_text_tile.gif" />
+    <Content Include="Images\ambitios_footer_text_tile_g_right.gif" />
+    <Content Include="Images\ambitios_footer_tile_g_left.gif" />
+    <Content Include="Images\ambitios_footer_tile_g_right.gif" />
+    <Content Include="Images\ambitios_header_bg.gif" />
+    <Content Include="Images\ambitios_header_row_sub.gif" />
+    <Content Include="Images\ambitios_header_row_t_sub.gif" />
+    <Content Include="Images\ambitios_header_tile_left.gif" />
+    <Content Include="Images\ambitios_header_tile_right.gif" />
+    <Content Include="Images\ambitios_input_bg.gif" />
+    <Content Include="Images\ambitios_logo.png" />
+    <Content Include="Images\ambitios_marker.png" />
+    <Content Include="Images\ambitios_marker2.png" />
+    <Content Include="Images\ambitios_medium_pic.gif" />
+    <Content Include="Images\ambitios_medium_pic.jpg" />
+    <Content Include="Images\ambitios_medium_pic1.jpg" />
+    <Content Include="Images\ambitios_medium_pic2.jpg" />
+    <Content Include="Images\ambitios_medium_pic3.jpg" />
+    <Content Include="Images\ambitios_medium_pic31.jpg" />
+    <Content Include="Images\ambitios_medium_pic32.jpg" />
+    <Content Include="Images\ambitios_medium_pic33.jpg" />
+    <Content Include="Images\ambitios_medium_pic34.jpg" />
+    <Content Include="Images\ambitios_medium_pic35.jpg" />
+    <Content Include="Images\ambitios_medium_pic36.jpg" />
+    <Content Include="Images\ambitios_menu_bgactive_left.png" />
+    <Content Include="Images\ambitios_menu_bgactive_right.png" />
+    <Content Include="Images\ambitios_menu_bgactive_tile.gif" />
+    <Content Include="Images\ambitios_menu_bghover_left.png" />
+    <Content Include="Images\ambitios_menu_bghover_right.png" />
+    <Content Include="Images\ambitios_menu_bghover_tile.png" />
+    <Content Include="Images\ambitios_pic1.jpg" />
+    <Content Include="Images\ambitios_pic1.png" />
+    <Content Include="Images\ambitios_pic11.jpg" />
+    <Content Include="Images\ambitios_pic11.png" />
+    <Content Include="Images\ambitios_pic12.jpg" />
+    <Content Include="Images\ambitios_pic12.png" />
+    <Content Include="Images\ambitios_pic2.jpg" />
+    <Content Include="Images\ambitios_pic2.png" />
+    <Content Include="Images\ambitios_pic3.jpg" />
+    <Content Include="Images\ambitios_pic3.png" />
+    <Content Include="Images\ambitios_pic4.jpg" />
+    <Content Include="Images\ambitios_pic41.jpg" />
+    <Content Include="Images\ambitios_pic42.jpg" />
+    <Content Include="Images\ambitios_pic43.jpg" />
+    <Content Include="Images\ambitios_pic44.jpg" />
+    <Content Include="Images\ambitios_pic45.jpg" />
+    <Content Include="Images\ambitios_pic5.gif" />
+    <Content Include="Images\ambitios_pic5.jpg" />
+    <Content Include="Images\ambitios_pic51.jpg" />
+    <Content Include="Images\ambitios_pic6.gif" />
+    <Content Include="Images\ambitios_related_01.jpg" />
+    <Content Include="Images\ambitios_related_02.jpg" />
+    <Content Include="Images\ambitios_related_03.jpg" />
+    <Content Include="Images\ambitios_related_04.jpg" />
+    <Content Include="Images\ambitios_related_05.jpg" />
+    <Content Include="Images\ambitios_related_06.jpg" />
+    <Content Include="Images\ambitios_row2_bg.jpg" />
+    <Content Include="Images\ambitios_row2_bg_g_left.gif" />
+    <Content Include="Images\ambitios_row2_bg_g_right.gif" />
+    <Content Include="Images\ambitios_rows_sub_t_right.gif" />
+    <Content Include="Images\ambitios_row_tile_bottom.gif" />
+    <Content Include="Images\ambitios_row_tile_left.gif" />
+    <Content Include="Images\ambitios_row_tile_right.gif" />
+    <Content Include="Images\ambitios_row_tile_sub.gif" />
+    <Content Include="Images\ambitios_row_tile_sub_right.gif" />
+    <Content Include="Images\ambitios_row_top.gif" />
+    <Content Include="Images\ambitios_row_top_g.gif" />
+    <Content Include="Images\ambitios_shape.png" />
+    <Content Include="Images\ambitios_shape_carousel.gif" />
+    <Content Include="Images\ambitios_shape_carousel.png" />
+    <Content Include="Images\ambitios_share_button.gif" />
+    <Content Include="Images\ambitios_share_button_hover.gif" />
+    <Content Include="Images\ambitios_share_read_more.gif" />
+    <Content Include="Images\ambitios_slider_button.png" />
+    <Content Include="Images\ambitios_small_pic.gif" />
+    <Content Include="Images\ambitios_small_pic.jpg" />
+    <Content Include="Images\ambitios_small_pic1.jpg" />
+    <Content Include="Images\ambitios_small_pic2.jpg" />
+    <Content Include="Images\ambitios_small_pic3.gif" />
+    <Content Include="Images\ambitios_small_pic3.jpg" />
+    <Content Include="Images\ambitios_small_pic31.jpg" />
+    <Content Include="Images\ambitios_small_pic32.jpg" />
+    <Content Include="Images\ambitios_small_pic4.gif" />
+    <Content Include="Images\ambitios_small_pic4.jpg" />
+    <Content Include="Images\ambitios_small_pic41.jpg" />
+    <Content Include="Images\ambitios_small_pic42.jpg" />
+    <Content Include="Images\ambitios_small_pic5.gif" />
+    <Content Include="Images\ambitios_small_pic5.jpg" />
+    <Content Include="Images\ambitios_small_pic6.gif" />
+    <Content Include="Images\ambitios_small_pic61.jpg" />
+    <Content Include="Images\ambitios_small_pic62.jpg" />
+    <Content Include="Images\ambitios_small_pic63.jpg" />
+    <Content Include="Images\ambitios_small_pic64.jpg" />
+    <Content Include="Images\ambitios_submit_button.png" />
+    <Content Include="Images\ambitios_title_bg.gif" />
+    <Content Include="Images\ambitios_title_bg_left.gif" />
+    <Content Include="Images\ambitios_title_bg_right.gif" />
+    <Content Include="Images\ambitios_title_bg_tile.gif" />
+    <Content Include="Images\ava1.jpg" />
+    <Content Include="Images\ava2.jpg" />
+    <Content Include="Images\border-radius.htc" />
+    <Content Include="Images\drop_bg.png" />
+    <Content Include="Images\error.gif" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\features_01.jpg" />
+    <Content Include="Images\features_02.jpg" />
+    <Content Include="Images\features_03.jpg" />
+    <Content Include="Images\features_04.jpg" />
+    <Content Include="Images\features_05.jpg" />
+    <Content Include="Images\features_06.jpg" />
+    <Content Include="Images\features_07.jpg" />
+    <Content Include="Images\features_08.jpg" />
+    <Content Include="Images\features_09.jpg" />
+    <Content Include="Images\features_10.jpg" />
+    <Content Include="Images\features_11.jpg" />
+    <Content Include="Images\features_12.jpg" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\magnify_video.png" />
+    <Content Include="Images\magnity_plus.png" />
+    <Content Include="Images\success.png" />
+    <Content Include="Images\validation.png" />
+    <Content Include="Images\warning.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Upload.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2025</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2025/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

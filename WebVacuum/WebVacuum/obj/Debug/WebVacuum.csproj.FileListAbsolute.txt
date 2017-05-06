@@ -1,0 +1,10 @@
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\WebVacuum.dll.config
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\WebVacuum.dll
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\WebVacuum.pdb
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\obj\Debug\WebVacuum.dll
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\obj\Debug\WebVacuum.pdb
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\obj\Debug\WebVacuum.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\DbLink.dll
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\EntityFramework.dll
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\DbLink.pdb
+D:\need\buffer\train_ASP\WebVacuum\WebVacuum\bin\EntityFramework.xml

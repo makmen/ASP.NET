@@ -1,0 +1,72 @@
+﻿@model ConnectionDb.News
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div id="register">
+        @if (ViewContext.RouteData.Values["Action"].ToString().ToLower() == "add")
+         {
+            <h3 class="register">
+                Добавить новость 
+            </h3>
+        } 
+        else {
+            <h3 class="register">
+               Редактировать новость
+            </h3> 
+        }
+
+@if (ViewBag.Success != null)
+{
+    <br />
+    <div class="mess-top">
+        <div class="fbok">
+            <div class="success">@ViewBag.Success</div>
+        </div>
+    </div>
+}
+@if (ViewBag.Error != null)
+{
+    <div class="mess-top">
+        <div class="error">
+            <div class="msg">@ViewBag.Error</div>
+        </div>
+    </div>
+}
+@using (Html.BeginForm())
+{
+    <div class="fb">
+        <div class="description">Название:</div>
+        <div class="date">
+            @Html.TextBox("Title", null, new { @class = "w100" })
+            @if (!ViewData.ModelState.IsValidField("Title"))
+            {
+            <div class="error">
+                <div class="msg">
+                    @Html.ValidationMessageFor(x => x.Title)
+                </div>
+            </div>
+            }
+        </div>
+        <div class="cb"></div>
+    </div>
+    <div class="fb">
+        <div class="description">Содержание:</div>
+        <div class="date">
+            @Html.TextArea("Content", null, 30, 10, new { @class = "w100" })
+            @if (!ViewData.ModelState.IsValidField("Content"))
+            {
+            <div class="error">
+                <div class="msg">
+                    @Html.ValidationMessageFor(x => x.Content)
+                </div>
+            </div>
+            }        
+        </div>
+        <div class="cb"></div>
+    </div>
+    <div class="submit news">
+        <input type="submit" class="btn" value="Сохранить" />
+    </div>
+}
+</div>

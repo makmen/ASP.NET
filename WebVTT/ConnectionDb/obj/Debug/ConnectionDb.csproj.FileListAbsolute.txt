@@ -1,0 +1,10 @@
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\obj\Debug\ConnectionDb.csprojResolveAssemblyReference.cache
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\ConnectionDb.dll.config
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\ConnectionDb.dll
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\ConnectionDb.pdb
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\EntityFramework.dll
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\EntityFramework.SqlServer.dll
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\EntityFramework.xml
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\bin\Debug\EntityFramework.SqlServer.xml
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\obj\Debug\ConnectionDb.dll
+D:\need\buffer\trainMVC\WebVTT\ConnectionDb\obj\Debug\ConnectionDb.pdb

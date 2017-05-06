@@ -1,0 +1,10 @@
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\DbLink.dll.config
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\DbLink.dll
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\DbLink.pdb
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\EntityFramework.dll
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\EntityFramework.SqlServer.dll
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\EntityFramework.xml
+D:\need\buffer\train_ASP\WebVacuum\DbLink\bin\Debug\EntityFramework.SqlServer.xml
+D:\need\buffer\train_ASP\WebVacuum\DbLink\obj\Debug\DbLink.csprojResolveAssemblyReference.cache
+D:\need\buffer\train_ASP\WebVacuum\DbLink\obj\Debug\DbLink.dll
+D:\need\buffer\train_ASP\WebVacuum\DbLink\obj\Debug\DbLink.pdb

@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mul</title>
+</head>
+<body>
+    <div>
+        Mul
+    </div>
+    <div>
+        @if (ViewData["result"] != null)
+        {
+            <p>Result: @ViewData["first"] * @ViewData["second"] = @ViewData["result"]</p>
+        }
+        else
+        {
+            <p>Введите правильные значения</p>
+        }
+    </div>
+
+</body>
+</html>

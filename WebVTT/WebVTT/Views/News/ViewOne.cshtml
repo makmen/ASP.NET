@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "ViewOne";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="ambitios_p4">
+    <div class="ambitios_wrapper ambitios_p2">
+        <h3 class="ambitios_uppercase ambitios_p5">@ViewBag.OneNews.Title</h3>
+        <div class="ambitios_date">
+            @ViewBag.OneNews.Created
+            <div class="printlink">
+                <a href="#" id="auc-print">Версия для печати</a>
+            </div>
+            <div class="cb"></div>
+            @if (ViewBag.CanEdit != null) 
+            {
+                <div class="newsedit">
+                    <a href="@Url.Content("~/news/edit/"+ViewBag.OneNews.Id)" onclick="back();">Редактировать</a>
+                </div>
+                <div class="cb"></div>
+            }
+
+        </div>
+        <br />
+        @ViewBag.OneNews.Content
+
+    </div>
+    <a href="javascript:void(0)" onclick="back();">Вернуться на предыдущую страницы</a>
+</div>
+<script type="text/javascript" language="javascript">
+    function back() {
+        history.go(-1);
+    }
+
+    $(function(){ 
+        $('#auc-print').click(function(){ 
+            prnt_wnd = window.open('@Url.Content("~/news/print/"+ViewBag.OneNews.Id)', 'print_view', 'width=900, height=700,toolbar=0, scrollbars=yes');
+            prnt_wnd.focus();
+            return false;
+        });
+    });
+</script>
+
